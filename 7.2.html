@@ -1,0 +1,24 @@
+<!DOCTYPE HTML>
+<html lang='en'>
+	<head>
+	<meta charset='utf-8'>
+		<title>Chp.7.2</title>
+		<meta name='description' content='this is a description'/>
+		<script type="text/JavaScript">
+		/*
+		input= distance in Meters
+		processing= meters to miles, miles to ft, ft to inches.
+		output= miles, feet, inches.
+		*/
+		var d = window.prompt('Distance in Meters');
+		d = parseFloat(d);
+		var m = d/1609.34;
+		var f = m*5280;
+		var i = f*12;
+		window.alert(d + "meters is " + m + "miles or " + f + "feet or " + i + "inches.");
+		</script>
+	</head>
+	<body>
+		
+	</body>
+</html>

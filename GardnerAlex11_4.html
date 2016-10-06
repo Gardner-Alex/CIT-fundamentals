@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<html lang='en'>
+	<head>
+	<meta charset='utf-8'>
+		<title>Ch11_4</title>
+		<script type="text/JavaScript">
+	
+	
+	function computeFutureValue(principal, annualRate, years, periodPerYear){
+	
+	var f = Math.round(100 * (principal * Math.pow((1 + annualRate / periodPerYear), (years *periodPerYear))));
+	f /= 100;
+	document.myform.fv.value = f;
+	}
+		</script>
+		<meta name='description' content='this is a description'/>
+	</head>
+	<body>
+	<form name='myform'>
+	<h1>Investment Calculator</h1>
+	Amount invested (principal) 
+	<input type = 'text' name='p'/> <br>
+	Annual rate (example: .08) 
+	<input type = 'text' name='r'/> <br>
+	Number of years 
+	<input type = 'text' name='y'/> <br>
+	Periods per year 
+	<input type = 'text' name='ppy'/> <br>
+	<button type = "button" onclick = "computeFutureValue(parseFloat(document.myform.p.value),parseFloat(document.myform.r.value), 
+	parseFloat(document.myform.y.value),parseFloat(document.myform.ppy.value))">Compute future value</button>
+	<input type = 'text' name='fv' /> <br>
+	<button type = "button" onclick = "document.myform.p.value = 0, document.myform.r.value = 0, 
+	document.myform.y.value = 0, document.myform.ppy.value = 0, document.myform.fv.value = 0 ">Reset</button>
+	
+	</form>
+	</body>
+	
+	
+</html>

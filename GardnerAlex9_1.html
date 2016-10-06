@@ -1,0 +1,48 @@
+<!DOCTYPE HTML>
+<html lang='en'>
+	<head>
+	<meta charset='utf-8'>
+		<title>My First Javascript Program</title>
+		<meta name='description' content='this is a description'/>
+		<script type="text/JavaScript">
+		// input = # of credits, name.
+		//compute = credits left
+		//output = year in school
+		function years(){
+		var name = document.myForm.yourName.value;
+		var credits = parseInt(document.myForm.yourCredits.value);
+		var output = name;
+		if(credits < 30 && credits >= 0)
+		{
+		output += " freshman";
+		}
+		else if(credits < 60 && credits >= 30)
+		{
+		output += " sophmore";
+		}
+		else if(credits < 90 && credits >=60)
+		{
+		output += " junior";
+		}
+		else
+		{
+		output += " senior";
+		}
+		document.myForm.yourYear.value = output;
+		}
+		
+		</script>
+	</head>
+	<body>
+	<form name = "myForm">
+	Enter your name
+	<input type = "text" name = "yourName"/><br>
+	Enter your credits
+	<input type = "text" name = "yourCredits"/><br>
+	<button type = "button" onclick = "years()">Get year</button>
+	<textarea name = "yourYear">
+	</textarea>
+	</form>
+		
+	</body>
+</html>

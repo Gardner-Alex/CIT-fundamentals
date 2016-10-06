@@ -1,0 +1,47 @@
+<!DOCTYPE HTML>
+<html lang='en'>
+	<head>
+	<meta charset='utf-8'>
+		<title>My First Javascript Program</title>
+		<meta name='description' content='this is a description'/>
+		<script type="text/JavaScript">
+		//input = customer's total
+		//process = if total > $50 and today is tuesday or wednesday. total -= (total / .1) total += (total / .06) 
+		//output = day, total
+		function money(){
+		var total = parseFloat(document.myForm.subtotal.value);
+		var d = new Date();
+		var n = d.getDay();
+		// I tried to use what was in the book but I couldn't figure it out so I looked online and found this version of the date function broken into two lines.
+		if(total > 50 && n == 2)
+		{
+		total -= (total*.1);
+		total += (total*.06);
+		}
+		else if(total > 50 && n == 3)
+		{
+		total -= (total*.1);
+		total += (total*.06);
+		}
+		else
+		{
+		total += (total*.06);
+		}
+		total *= 100;
+		total = Math.round(total);
+		total /= 100;
+		document.myForm.yourTotal.value = total;
+		}
+		</script>
+	</head>
+	<body>
+		<form name = "myForm">
+	Enter subtotal
+	<input type = "text" name = "subtotal"/><br>
+	
+	<button type = "button" onclick = "money()">Get Total</button>
+	<textarea name = "yourTotal">
+	</textarea>
+	</form>
+	</body>
+</html>

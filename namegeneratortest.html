@@ -1,0 +1,24 @@
+<!DOCTYPE HTML>
+<html lang='en'>
+	<head>
+	<meta charset='utf-8'>
+		<title>My Page</title>
+		<script type="text/JavaScript">
+		function getName(){
+		var fname=document.myform.firstName.value;
+		var lname=document.myform.lastName.value;
+		var myFullName=fname +' '+lname;
+		document.myform.fullName.value=myFullName;
+		}
+		</script>
+		<meta name='description' content='this is a description'/>
+	</head>
+	<body>
+	<form name='myform'>
+	<input type = 'text' name='firstName'/>
+	<input type = 'text' name='lastName'/>
+	<textarea name='fullName'>
+	</textarea>
+	<button type= 'button' onclick= 'getName()'>Get The Name</button>
+	</body>
+</html>

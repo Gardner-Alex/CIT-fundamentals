@@ -1,0 +1,29 @@
+<!DOCTYPE HTML>
+<html lang='en'>
+	<head>
+	<meta charset='utf-8'>
+		<title>Chapter6 Example 6 mod</title>
+		<meta name='description' content='this is a description'/>
+		<script type="text/JavaScript">
+		function getInput(){
+		var digits = document.stuff.rate.value;
+		var number = parseInt(digits);
+		var square=number*number;
+		var cube=number*number*number;		
+		document.stuff.output.value=square;	
+		document.stuff.cubed.value=cube;
+		}
+		</script>
+	</head>
+	<body>
+		<form name="stuff">
+		Please enter a number: 
+		<p><input type="text" name="rate"></p>
+		<p>Input Squared:</p>
+		<p><input type="text" name="output"></p>
+		<p>Input Cubed:</p>
+		<p><input type="text" name="cubed"></p>
+		<button type="button" onclick="getInput()">
+		Get Output</button>
+	</body>
+</html>

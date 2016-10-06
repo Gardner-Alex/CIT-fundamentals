@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html lang='en'>
+	<head>
+	<meta charset='utf-8'>
+		<title>Ch11_3</title>
+		<script type="text/JavaScript">
+	
+	
+	function windChill(speed, tempF){
+	var f = Math.round(100 *(35.74 + (0.6215 * tempF) - (35.754 * Math.pow(speed,0.16)) + ((0.4275 * tempF) * Math.pow(speed, 0.16))));
+	f /= 100;
+	document.myform.Chill.value = f;
+	}
+		</script>
+		<meta name='description' content='this is a description'/>
+	</head>
+	<body>
+	<form name='myform'>
+	
+	Please Enter Fahrenheit <br>
+	<input type = 'text' name='Fahrenheit'/> <br>
+	Please Enter Wind Speed <br>
+	<input type = 'text' name='Speed'/> <br>
+	<button type = "button" onclick = "windChill(parseFloat(document.myform.Speed.value),parseFloat(document.myform.Fahrenheit.value))">Compute</button>
+	Wind Chill<br>
+	<input type = 'text' name='Chill' />
+	
+	</form>
+	</body>
+	
+	
+</html>

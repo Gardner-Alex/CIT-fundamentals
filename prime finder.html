@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+<html lang='en'>
+	<head>
+	<meta charset='utf-8'>
+		<title>My First Javascript Program</title>
+		<meta name='description' content='this is a description'/>
+		<script type="text/JavaScript">
+		
+		function prime(){
+		var num = parseInt(document.myForm.myNumber.value);
+		var result = "is prime";
+		for(var i = 2; i<num;i++){
+		if(num % i == 0){
+		result = "is not prime";
+		}
+		}
+		document.myForm.end.value = result;
+		}
+		</script>
+	</head>
+	<body>
+		<form name = "myForm">
+	Enter number
+	<input type = "text" name = "myNumber"/><br>
+	
+	<button type = "button" onclick = "prime()">Prime finder</button>
+	<textarea name = "end">
+	</textarea>
+	</body>
+</html>

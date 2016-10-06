@@ -1,0 +1,38 @@
+<!DOCTYPE HTML>
+<html lang='en'>
+	<head>
+	<meta charset='utf-8'>
+		<title>My Page</title>
+		<script type="text/JavaScript">
+		function addressGen(){
+		var name=document.myform.myName.value;
+		var street=document.myform.myStreet.value;
+		var city=document.myform.myCity.value;
+		var state=document.myform.myState.value;
+		var zipCode=document.myform.myZipCode.value;
+		var fullAddress=name  +'\n'+ street +'\n'+ city + ', ' + state + ' ' + zipCode;
+		document.myform.myFullAddress.value=fullAddress;
+		}
+		</script>
+		<meta name='description' content='this is a description'/>
+	</head>
+	<body>
+	<form name='myform'>
+	Name
+	<input type = 'text' name='myName'/><br/>
+	Street
+	<input type = 'text' name='myStreet'/><br/>
+	City
+	<input type = 'text' name='myCity'/>
+	State
+	<input type = 'text' name='myState'/>
+	Zipcode
+	<input type = 'text' name='myZipCode'/><br/>
+	<button type= 'button' onclick= 'addressGen()'>Make Address</button>
+	<textarea name='myFullAddress'>
+	</textarea>
+	</form>
+	</body>
+	
+	
+</html>

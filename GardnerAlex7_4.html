@@ -1,0 +1,40 @@
+<!DOCTYPE HTML>
+<html lang='en'>
+	<head>
+	<meta charset='utf-8'>
+		<title>Chp.7.2</title>
+		<meta name='description' content='this is a description'/>
+		<script type="text/JavaScript">
+		/*
+		input= beginning milage, end milage, gallons of gas used.
+		processing= end miles - beginning miles / gas used.
+		output= miles per gallon.
+		*/
+		function milage(){
+		var b = parseFloat(document.myform.bMiles.value);
+		var e = parseFloat(document.myform.eMiles.value);
+		var g = parseFloat(document.myform.gas.value);
+		var t = (e-b)/g;
+		t *= 100;
+		t = Math.round(t);
+		t /= 100;
+		
+		document.myform.total.value = t;
+		}
+		</script>
+	</head>
+	<body>
+	<form name = 'myform'>
+	Beginning Mileage
+	<input type = 'text' name ='bMiles'/></br>
+	Ending Mileage
+	<input type = 'text' name = 'eMiles'/></br>
+	Gallons of Gas
+	<input type = 'text' name = 'gas'/></br>
+	<button type = 'button' onclick = 'milage()'>Get Milage</button> </br>
+	Miles per Gallon</br>
+	<textarea name = 'total'>
+	</textarea>
+		
+	</body>
+</html>

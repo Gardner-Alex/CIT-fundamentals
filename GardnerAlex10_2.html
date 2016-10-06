@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+<html lang='en'>
+	<head>
+	<meta charset='utf-8'>
+		<title>Chapter10#2</title>
+		<meta name='description' content='this is a description'/>
+		<script type="text/JavaScript">
+		//input = number;
+		//compute = odd numbers < max += odd numbers < max;
+		//output = sum of odd numbers;
+		function odd(){
+		var x = 0;
+		var i = 0;
+		var max = parseInt(document.myForm.myNumber.value);
+		for(var i = 0; i <= max; i++){
+		if(i % 2 !== 0){
+		x+=i;
+		}
+		}
+		document.myForm.end.value = x;
+		}
+		</script>
+	</head>
+	<body>
+		<form name = "myForm">
+	Enter number
+	<input type = "text" name = "myNumber"/><br>
+	
+	<button type = "button" onclick = "odd()">Odd Sum</button>
+	<textarea name = "end">
+	</textarea>
+	</body>
+</html>

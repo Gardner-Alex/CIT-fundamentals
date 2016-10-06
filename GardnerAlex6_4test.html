@@ -1,0 +1,26 @@
+<!DOCTYPE HTML>
+<html lang='en'>
+	<head>
+	<meta charset='utf-8'>
+		<title>My Page</title>
+		<script type="text/JavaScript">
+		function addressGen(){
+		var name=document.myform.myName.value;
+		
+		var fullAddress=name;
+		document.myform.myFullAddress.value=fullAddress;
+		}
+		</script>
+		<meta name='description' content='this is a description'/>
+	</head>
+	<body>
+	<form name='myform'>
+	Name
+	<input type = 'text' name='myName'/><br/>
+	
+	<button type= 'button' onclick= 'addressGen()'>Make Address</button>
+	</body>
+	<textarea name='myFullAddress'>
+	</textarea>
+	
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE HTML>
+<html lang='en'>
+	<head>
+	<meta charset='utf-8'>
+		<title>My First Javascript Program</title>
+		<meta name='description' content='this is a description'/>
+		<script type="text/JavaScript">
+		function pyramidVolume(side,height){
+		var v = (Math.pow(side,2) * height) / 3;
+		window.alert(v);
+}
+		
+		</script>
+	</head>
+	<body>
+	<form name='myform'>
+	<input type = 'text' name='p'/> <br>
+	<form name='myform'>
+	<input type = 'text' name='a'/> <br>
+	<button type = "button" onclick = "pyramidVolume(parseInt(document.myform.p.value), parseInt(document.myform.a.value))">Prime finder</button>
+	</form>
+	</body>
+</html>

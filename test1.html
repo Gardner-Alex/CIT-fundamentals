@@ -1,0 +1,34 @@
+ 
+
+
+<!DOCTYPE HTML> 
+<html lang="en-us"> 
+<head> 
+<meta charset="utf-8"> 
+<title>How Many Acres?</title> 
+
+<script type="text/JavaScript"> 
+function computeSize()
+{
+var w = document.land.width.value;
+var f = document.land.length.value;
+var a = w*f/43560;
+document.land.acres.value = a;
+}
+
+// Your JavaScript function belongs here. 
+
+
+</script> 
+</head> 
+
+<body> 
+<h1>How Many Acres?</h1> 
+<form name="land"> 
+    Width (feet) <input type="text" name="width"><br> 
+    Length (feet) <input type="text" name="length"><br> 
+    <button type="button" onclick="computeSize()">Compute Size</button><br> 
+    Size (acres) <input type="text" name="acres"> 
+</form> 
+</body> 
+</html> 

@@ -1,0 +1,83 @@
+<!DOCTYPE HTML>
+<html lang='en'>
+	<head>
+	<meta charset='utf-8'>
+		<title>My First Javascript Program</title>
+		<meta name='description' content='this is a description'/>
+		<script type="text/JavaScript">
+function binary()
+{		
+var a = document.myform.number.value;
+var i = parseInt(a);
+var output = '';
+if(i>=128)
+{
+i-=128;
+output+='1';
+}
+else
+output+='0';
+if(i>=64)
+{
+i-=64;
+output+='1';
+}
+else
+output+='0';
+if(i >=32)
+{
+i-=32;
+output+='1';
+}
+else
+output+='0';
+if(i>=16)
+{
+i-=16;
+output+='1';
+}
+else
+output+='0';
+if(i>=8)
+{
+i-=8;
+output+='1';
+}
+else
+output+='0';
+if(i>=4)
+{
+i-=4;
+output+='1';
+}
+else
+output+='0';
+if(i>=2)
+{
+i-=2;
+output+='1';
+}
+else
+output+='0';
+if(i >= 1)
+{
+i-=1;
+output+='1';
+}
+else
+output+='0';
+document.myform.number2.value = output;
+}
+		</script>
+	</head>
+	<body>
+		<form name='myform'>
+	please enter a number less than 256.
+	<input type = 'text' name='number'/><br/>
+	<button type= 'button' onclick= 'binary()'>convert to binary</button>
+	<textarea name='number2'>
+	</textarea>
+	</form>
+		
+	</body>
+</html>
